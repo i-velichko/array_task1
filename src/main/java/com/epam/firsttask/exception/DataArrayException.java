@@ -1,6 +1,6 @@
 package com.epam.firsttask.exception;
 
-public class DataArrayException extends Exception{
+public class DataArrayException extends Exception {
 
     public DataArrayException() {
     }
