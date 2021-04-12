@@ -2,7 +2,7 @@ package com.epam.firsttask.service;
 
 import com.epam.firsttask.entity.DataArray;
 
-public class ArrayService {
+public class ArrayСalculateService {
 
     public int findMinValue(DataArray dataArray) {
         int arraySize = dataArray.getArray().length;
