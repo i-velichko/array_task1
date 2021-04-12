@@ -5,7 +5,7 @@ import com.epam.firsttask.entity.DataArray;
 import com.epam.firsttask.exception.DataArrayException;
 import com.epam.firsttask.filereader.DataFileReader;
 import com.epam.firsttask.parser.DataParser;
-import com.epam.firsttask.service.ArrayСalculateService;
+import com.epam.firsttask.service.impl.ArrayCalculateServiceImpl;
 import com.epam.firsttask.validator.DataValidator;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -20,7 +20,7 @@ public class FirstTaskTest {
     private static DataValidator dataValidator;
     private static DataParser dataParser;
     private static DataArrayCreator dataArrayCreator;
-    private static ArrayСalculateService arrayСalculateService;
+    private static ArrayCalculateServiceImpl arrayCalculateServiceImpl;
 
     @BeforeClass
     public void setUp() {
@@ -28,7 +28,7 @@ public class FirstTaskTest {
         dataValidator = new DataValidator();
         dataParser = new DataParser();
         dataArrayCreator = new DataArrayCreator();
-        arrayСalculateService = new ArrayСalculateService();
+        arrayCalculateServiceImpl = new ArrayCalculateServiceImpl();
     }
 
     @Test
@@ -57,29 +57,31 @@ public class FirstTaskTest {
 
         DataArray dataArrayObject = actualDataArrays.get(0);
 
-        int actualMaxValue = arrayСalculateService.findMaxValue(dataArrayObject);
+        int actualMaxValue = arrayCalculateServiceImpl.findMaxValue(dataArrayObject);
         int expectedMaxValue = 87;
         Assert.assertEquals(expectedMaxValue, actualMaxValue);
 
-        int actualMinValue = arrayСalculateService.findMinValue(dataArrayObject);
+        int actualMinValue = arrayCalculateServiceImpl.findMinValue(dataArrayObject);
         int expectedMinValue = 1;
         Assert.assertEquals(expectedMinValue, actualMinValue);
 
-        int actualSumValues = arrayСalculateService.sumValues(dataArrayObject);
+        int actualSumValues = arrayCalculateServiceImpl.sumValues(dataArrayObject);
         int expectedSumValues = 261;
         Assert.assertEquals(expectedSumValues, actualSumValues);
 
-        int actualAverageValue = arrayСalculateService.findAverageValue(dataArrayObject);
+        int actualAverageValue = arrayCalculateServiceImpl.findAverageValue(dataArrayObject);
         int expectedAverageValue = 26;
         Assert.assertEquals(expectedAverageValue, actualAverageValue);
 
-        int actualPositiveElementsNumber = arrayСalculateService.fiandPositiveElementsNumber(dataArrayObject);
+        int actualPositiveElementsNumber = arrayCalculateServiceImpl.findPositiveElementsNumber(dataArrayObject);
         int expectedPositiveElementsNumber = 10;
         Assert.assertEquals(expectedPositiveElementsNumber, actualPositiveElementsNumber);
 
-        int actualNegativeElementsNumber = arrayСalculateService.findNegativeElementsNumber(dataArrayObject);
+        int actualNegativeElementsNumber = arrayCalculateServiceImpl.findNegativeElementsNumber(dataArrayObject);
         int expectedNegativeElementsNumber = 0;
         Assert.assertEquals(expectedNegativeElementsNumber, actualNegativeElementsNumber);
+
+
 
 //        DataArray actualArrayObject  = arrayService.replaceArrayElementsWithOppositeSigns(dataArrayObject);
 //        Assert.assertEquals(new DataArray() , actualArrayObject);

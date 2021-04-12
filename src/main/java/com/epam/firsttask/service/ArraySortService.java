@@ -1,8 +1,8 @@
 package com.epam.firsttask.service;
 
-public class ArraySortService {
+import com.epam.firsttask.entity.DataArray;
 
-    public int[] bubbleSort (int[] arraySort){
-        return arraySort;
-    }
+public interface ArraySortService {
+
+    public void bubbleSort(DataArray dataArray);
 }

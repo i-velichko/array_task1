@@ -1,9 +1,11 @@
-package com.epam.firsttask.service;
+package com.epam.firsttask.service.impl;
 
 import com.epam.firsttask.entity.DataArray;
+import com.epam.firsttask.service.ArrayCalculateService;
 
-public class ArrayСalculateService {
+public class ArrayCalculateServiceImpl implements ArrayCalculateService {
 
+    @Override
     public int findMinValue(DataArray dataArray) {
         int arraySize = dataArray.getArray().length;
         int minValue = dataArray.getArray()[0];
@@ -18,6 +20,7 @@ public class ArrayСalculateService {
 
     }
 
+    @Override
     public int findMaxValue(DataArray dataArray) {
         int arraySize = dataArray.getArray().length;
         int maxValue = dataArray.getArray()[0];
@@ -32,6 +35,7 @@ public class ArrayСalculateService {
 
     }
 
+    @Override
     public int sumValues(DataArray dataArray) {
         int elementsArraySum = 0;
         int arraySize = dataArray.getArray().length;
@@ -41,6 +45,7 @@ public class ArrayСalculateService {
         return elementsArraySum;
     }
 
+    @Override
     public int findAverageValue(DataArray dataArray) {
         int elementsArraySum = 0;
         int arraySize = dataArray.getArray().length;
@@ -51,7 +56,8 @@ public class ArrayСalculateService {
         return averageValue;
     }
 
-    public int fiandPositiveElementsNumber(DataArray dataArray) {
+    @Override
+    public int findPositiveElementsNumber(DataArray dataArray) {
         int positiveNumber = 0;
         int arraySize = dataArray.getArray().length;
         for (int i = 0; i < arraySize; i++) {
@@ -61,6 +67,7 @@ public class ArrayСalculateService {
         return positiveNumber;
     }
 
+    @Override
     public int findNegativeElementsNumber(DataArray dataArray) {
         int negativeNumber = 0;
         int arraySize = dataArray.getArray().length;
@@ -71,6 +78,7 @@ public class ArrayСalculateService {
         return negativeNumber;
     }
 
+    @Override
     public DataArray replaceArrayElementsWithOppositeSigns(DataArray dataArray) {
         int arraySize = dataArray.getArray().length;
         for (int i = 0; i < arraySize; i++) {
