@@ -79,11 +79,11 @@ public class ArrayCalculateServiceImpl implements ArrayCalculateService {
     }
 
     @Override
-    public DataArray replaceArrayElementsWithOppositeSigns(DataArray dataArray) {
+    public int[] replaceArrayElementsWithOppositeSigns(DataArray dataArray) {
         int arraySize = dataArray.getArray().length;
         for (int i = 0; i < arraySize; i++) {
             dataArray.getArray()[i] = dataArray.getArray()[i] * -1;
         }
-        return dataArray;
+        return dataArray.getArray();
     }
 }

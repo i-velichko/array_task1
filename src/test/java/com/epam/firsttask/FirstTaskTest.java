@@ -47,7 +47,6 @@ public class FirstTaskTest {
             }
         }
         int validLinesSize = actualValidLines.size();
-        System.out.println(actualValidLines);
 
         for (String validLine : actualValidLines) {
             int[] ints = dataParser.convertStringToNumbers(validLine);
@@ -81,10 +80,9 @@ public class FirstTaskTest {
         int expectedNegativeElementsNumber = 0;
         Assert.assertEquals(expectedNegativeElementsNumber, actualNegativeElementsNumber);
 
-
-
-//        DataArray actualArrayObject  = arrayService.replaceArrayElementsWithOppositeSigns(dataArrayObject);
-//        Assert.assertEquals(new DataArray() , actualArrayObject);
+        int[] actualArrayBeforeReplacement = arrayCalculateServiceImpl.replaceArrayElementsWithOppositeSigns(dataArrayObject);
+        int[] expectedArrayAfterReplacement = {-3, -5, -12, -44, -2, -35, -66, -1, -6, -87};
+        Assert.assertEquals(expectedArrayAfterReplacement, actualArrayBeforeReplacement);
 
     }
 }

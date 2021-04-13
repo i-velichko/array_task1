@@ -1,2 +1,5 @@
-2021-04-09 15:23:47.771 [main] INFO  com.epam.firsttask.validator.DataValidator - Data string is not valid.
-2021-04-09 15:23:47.779 [main] INFO  com.epam.firsttask.validator.DataValidator - Data string is valid.
+2021-04-13 18:46:04.060 [main] INFO  com.epam.firsttask.validator.DataValidator - Data string is valid.
+2021-04-13 18:46:04.063 [main] INFO  com.epam.firsttask.validator.DataValidator - Data string is valid.
+2021-04-13 18:46:04.063 [main] INFO  com.epam.firsttask.validator.DataValidator - Data string is not valid.
+2021-04-13 18:46:04.063 [main] INFO  com.epam.firsttask.validator.DataValidator - Data string is valid.
+2021-04-13 18:46:04.064 [main] INFO  com.epam.firsttask.validator.DataValidator - Data string is valid.
