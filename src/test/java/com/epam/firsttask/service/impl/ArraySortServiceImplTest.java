@@ -2,7 +2,6 @@ package com.epam.firsttask.service.impl;
 
 import com.epam.firsttask.entity.DataArray;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

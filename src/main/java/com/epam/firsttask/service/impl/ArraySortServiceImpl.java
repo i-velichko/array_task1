@@ -1,6 +1,7 @@
 package com.epam.firsttask.service.impl;
 
 import com.epam.firsttask.entity.DataArray;
+import com.epam.firsttask.exception.DataArrayException;
 import com.epam.firsttask.service.ArraySortService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,7 +13,8 @@ public class ArraySortServiceImpl implements ArraySortService {
     private final static Logger LOGGER = LogManager.getLogger();
 
     @Override
-    public int[] intStreamArraySort(DataArray dataArray) {
+    public int[] intStreamArraySort(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
         LOGGER.info("Array before sorting - " + Arrays.toString(dataArray.getArray()));
         int[] ints = IntStream.of(dataArray.getArray())
                 .sorted().toArray();
@@ -21,7 +23,8 @@ public class ArraySortServiceImpl implements ArraySortService {
     }
 
     @Override
-    public int[] bubbleArraySort(DataArray dataArray) {
+    public int[] bubbleArraySort(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
         int[] arrayForSort = dataArray.getArray();
         int n = arrayForSort.length;
         int temp = 0;
@@ -35,42 +38,54 @@ public class ArraySortServiceImpl implements ArraySortService {
 
             }
         }
+        LOGGER.info("Bubble array sort use. Array after sorting - " + Arrays.toString(arrayForSort));
         return arrayForSort;
     }
 
     @Override
-    public int[] insertionArraySort(DataArray dataArray) {
-        for (int left = 0; left < dataArray.getArray().length; left++) {
-            int value = dataArray.getArray()[left];
+    public int[] insertionArraySort(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
+        int[] arrayForSort = dataArray.getArray();
+        for (int left = 0; left < arrayForSort.length; left++) {
+            int value = arrayForSort[left];
             int i = left - 1;
             for (; i >= 0; i--) {
-                if (value < dataArray.getArray()[i]) {
-                    dataArray.getArray()[i + 1] = dataArray.getArray()[i];
+                if (value < arrayForSort[i]) {
+                    arrayForSort[i + 1] = arrayForSort[i];
                 } else {
                     break;
                 }
             }
-            dataArray.getArray()[i + 1] = value;
+            arrayForSort[i + 1] = value;
         }
-        return dataArray.getArray();
+        LOGGER.info("Insertion array sort use. Array after sorting - " + Arrays.toString(arrayForSort));
+        return arrayForSort;
     }
 
     @Override
-    public int[] selectionArraySort(DataArray dataArray) {
-
-        for (int i = 0; i < dataArray.getArray().length; i++) {
-            int min = dataArray.getArray()[i];
+    public int[] selectionArraySort(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
+        int[] arrayForSort = dataArray.getArray();
+        for (int i = 0; i < arrayForSort.length; i++) {
+            int min = arrayForSort[i];
             int minId = i;
-            for (int j = i + 1; j < dataArray.getArray().length; j++) {
-                if (dataArray.getArray()[j] < min) {
-                    min = dataArray.getArray()[j];
+            for (int j = i + 1; j < arrayForSort.length; j++) {
+                if (arrayForSort[j] < min) {
+                    min = arrayForSort[j];
                     minId = j;
                 }
             }
-            int temp = dataArray.getArray()[i];
-            dataArray.getArray()[i] = min;
-            dataArray.getArray()[minId] = temp;
+            int temp = arrayForSort[i];
+            arrayForSort[i] = min;
+            arrayForSort[minId] = temp;
         }
-        return dataArray.getArray();
+        LOGGER.info("Selection array sort use. Array after sorting - " + Arrays.toString(arrayForSort));
+        return arrayForSort;
+    }
+
+    private void nullChek(DataArray dataArray) throws DataArrayException {
+        if (dataArray == null || dataArray.getArray() == null) {
+            throw new DataArrayException("Argument can not be null");
+        }
     }
 }

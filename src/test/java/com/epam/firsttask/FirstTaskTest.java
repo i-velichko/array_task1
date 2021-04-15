@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FirstTaskTest {
-    private final static String DATA_FILE_PATH = "src/test/recourses/data.txt";
+    private final static String DATA_FILE_PATH = "src/main/resources/data.txt";
     private static DataFileReader dataFileReader;
     private static DataValidator dataValidator;
     private static DataParser dataParser;
@@ -69,7 +69,7 @@ public class FirstTaskTest {
         Assert.assertEquals(expectedSumValues, actualSumValues);
 
         double actualAverageValue = arrayCalculateServiceImpl.findAverageValue(dataArrayObject);
-        double expectedAverageValue = 26;
+        double expectedAverageValue = 26.1;
         Assert.assertEquals(expectedAverageValue, actualAverageValue);
 
         int actualPositiveElementsNumber = arrayCalculateServiceImpl.findPositiveElementsNumber(dataArrayObject);

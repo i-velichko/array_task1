@@ -1,10 +1,11 @@
 import com.epam.firsttask.entity.DataArray;
+import com.epam.firsttask.exception.DataArrayException;
 import com.epam.firsttask.service.impl.ArrayCalculateServiceImpl;
 import com.epam.firsttask.service.impl.ArraySortServiceImpl;
 import com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws DataArrayException {
 
         int[] array = {10, 2, -10, -4, 2, -2, 6, 20};
         ArrayCalculateServiceImpl arrayCalculateService = new ArrayCalculateServiceImpl();
@@ -23,7 +24,9 @@ public class Main {
         intStreamArrayCalculateService.findMaxValue(dataArray);
         intStreamArrayCalculateService.findMinValue(dataArray);
 
-        arraySortService.intStreamArraySort(dataArray);
+        arraySortService.bubbleArraySort(dataArray);
+        arraySortService.insertionArraySort(dataArray);
+        arraySortService.selectionArraySort(dataArray);
 
     }
 }

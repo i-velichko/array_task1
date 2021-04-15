@@ -1,6 +1,7 @@
 package com.epam.firsttask.service.impl;
 
 import com.epam.firsttask.entity.DataArray;
+import com.epam.firsttask.exception.DataArrayException;
 import com.epam.firsttask.service.ArrayCalculateService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,7 +13,8 @@ public class IntStreamArrayCalculateServiceImpl implements ArrayCalculateService
     private final static Logger LOGGER = LogManager.getLogger();
 
     @Override
-    public int findMinValue(DataArray dataArray) {
+    public int findMinValue(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
         int minValue = IntStream.of(dataArray.getArray())
                 .min()
                 .orElseThrow();
@@ -21,7 +23,8 @@ public class IntStreamArrayCalculateServiceImpl implements ArrayCalculateService
     }
 
     @Override
-    public int findMaxValue(DataArray dataArray) {
+    public int findMaxValue(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
         int maxValue = IntStream.of(dataArray.getArray())
                 .max()
                 .orElseThrow();
@@ -30,7 +33,8 @@ public class IntStreamArrayCalculateServiceImpl implements ArrayCalculateService
     }
 
     @Override
-    public int sumValues(DataArray dataArray) {
+    public int sumValues(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
         int sum = IntStream.of(dataArray.getArray())
                 .sum();
         LOGGER.info("Use IntStream method. Sum  array elements = " + sum);
@@ -39,7 +43,8 @@ public class IntStreamArrayCalculateServiceImpl implements ArrayCalculateService
     }
 
     @Override
-    public double findAverageValue(DataArray dataArray) {
+    public double findAverageValue(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
         double averageValue = IntStream.of(dataArray.getArray())
                 .average()
                 .orElseThrow();
@@ -48,7 +53,8 @@ public class IntStreamArrayCalculateServiceImpl implements ArrayCalculateService
     }
 
     @Override
-    public int findPositiveElementsNumber(DataArray dataArray) {
+    public int findPositiveElementsNumber(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
         int[] ints = IntStream.of(dataArray.getArray())
                 .filter(value -> value > 0)
                 .toArray();
@@ -57,7 +63,8 @@ public class IntStreamArrayCalculateServiceImpl implements ArrayCalculateService
     }
 
     @Override
-    public int findNegativeElementsNumber(DataArray dataArray) {
+    public int findNegativeElementsNumber(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
         int[] ints = IntStream.of(dataArray.getArray())
                 .filter(value -> value < 0)
                 .toArray();
@@ -66,11 +73,17 @@ public class IntStreamArrayCalculateServiceImpl implements ArrayCalculateService
     }
 
     @Override
-    public int[] replaceArrayElementsWithOppositeSigns(DataArray dataArray) {
+    public int[] replaceArrayElementsWithOppositeSigns(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
         int[] ints = IntStream.of(dataArray.getArray())
                 .map(value -> value * -1)
                 .toArray();
         LOGGER.info("Use IntStream method. Replaced with opposite signs array elements is - " + Arrays.toString(ints));
         return ints;
+    }
+    private void nullChek(DataArray dataArray) throws DataArrayException {
+        if (dataArray == null || dataArray.getArray() == null) {
+            throw new DataArrayException("Argument can not be null");
+        }
     }
 }

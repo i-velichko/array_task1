@@ -7,27 +7,23 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Arrays;
-import java.util.Optional;
 
 public class ArrayCalculateServiceImpl implements ArrayCalculateService {
     private final static Logger LOGGER = LogManager.getLogger();
 
     @Override
-    public int findMinValue(DataArray dataArray) {
-        return Optional.ofNullable(dataArray)
-                .map(DataArray::getArray)
-                .map(ints -> {
-                    int[] array = dataArray.getArray();
-                    int minValue = array[0];
+    public int findMinValue(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
+        int[] array = dataArray.getArray();
+        int minValue = array[0];
 
-                    for (int j : array) {
-                        if (j < minValue) {
-                            minValue = j;
-                        }
-                    }
-                    LOGGER.info("Min element value in this array = " + minValue);
-                    return minValue;
-                }).orElseThrow();
+        for (int j : array) {
+            if (j < minValue) {
+                minValue = j;
+            }
+        }
+        LOGGER.info("Min element value in this array = " + minValue);
+        return minValue;
     }
 
     @Override
@@ -46,7 +42,8 @@ public class ArrayCalculateServiceImpl implements ArrayCalculateService {
     }
 
     @Override
-    public int sumValues(DataArray dataArray) {
+    public int sumValues(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
         int[] array = dataArray.getArray();
         int elementsArraySum = 0;
         for (int j : array) {
@@ -57,7 +54,8 @@ public class ArrayCalculateServiceImpl implements ArrayCalculateService {
     }
 
     @Override
-    public double findAverageValue(DataArray dataArray) {
+    public double findAverageValue(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
         int[] array = dataArray.getArray();
         double elementsArraySum = 0;
         for (double j : array) {
@@ -69,7 +67,8 @@ public class ArrayCalculateServiceImpl implements ArrayCalculateService {
     }
 
     @Override
-    public int findPositiveElementsNumber(DataArray dataArray) {
+    public int findPositiveElementsNumber(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
         int[] array = dataArray.getArray();
         int positiveElementsNumber = 0;
         for (int j : array) {
@@ -82,7 +81,8 @@ public class ArrayCalculateServiceImpl implements ArrayCalculateService {
     }
 
     @Override
-    public int findNegativeElementsNumber(DataArray dataArray) {
+    public int findNegativeElementsNumber(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
         int[] array = dataArray.getArray();
         int negativeElementsNumber = 0;
         for (int j : array) {
@@ -94,7 +94,8 @@ public class ArrayCalculateServiceImpl implements ArrayCalculateService {
     }
 
     @Override
-    public int[] replaceArrayElementsWithOppositeSigns(DataArray dataArray) {
+    public int[] replaceArrayElementsWithOppositeSigns(DataArray dataArray) throws DataArrayException {
+        nullChek(dataArray);
         int[] array = dataArray.getArray();
         int arraySize = array.length;
         for (int i = 0; i < arraySize; i++) {

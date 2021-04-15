@@ -1,5 +1,6 @@
 package com.epam.firsttask.validator;
 
+import com.epam.firsttask.exception.DataArrayException;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,7 +12,7 @@ public class DataValidator {
     private final static Logger LOGGER = LogManager.getLogger();
     private static final String DATA_REGEX = "[0-9 ,-]+";
 
-    public boolean validateDataString(String dataLine) {
+    public boolean validateDataString(String dataLine) throws DataArrayException {
 
         boolean result = false;
 
@@ -28,7 +29,7 @@ public class DataValidator {
             }
 
         } else {
-            LOGGER.log(Level.INFO, "Data string is null.");
+            throw new DataArrayException("Data string is null.");
         }
         return result;
     }

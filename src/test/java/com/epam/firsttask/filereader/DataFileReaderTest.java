@@ -30,7 +30,7 @@ public class DataFileReaderTest {
         List<String> actualData = dataFileReader.readDataArray(WRONG_FILE_PATH);
     }
 
-    @Test(expectedExceptions = NullPointerException.class)
+    @Test(expectedExceptions = DataArrayException.class)
     public void testReadDataNullExp() throws DataArrayException {
         List<String> actualData = dataFileReader.readDataArray(null);
     }
