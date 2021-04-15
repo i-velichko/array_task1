@@ -4,9 +4,11 @@ import com.epam.firsttask.entity.DataArray;
 
 public interface ArraySortService {
 
-    public int[] bubbleArraySort(DataArray dataArray);
+    int[] bubbleArraySort(DataArray dataArray);
 
-    public int[] insertionArraySort(DataArray dataArray);
+    int[] insertionArraySort(DataArray dataArray);
 
-    public int[] selectionArraySort(DataArray dataArray);
+    int[] selectionArraySort(DataArray dataArray);
+
+    int[] intStreamArraySort(DataArray dataArray);
 }

@@ -15,6 +15,7 @@ public class DataFileReader {
         List<String> listOfDataForArray;
 
         try (Stream<String> lineStream = Files.lines(Paths.get(pathToFile))) {
+            //логи, логер всегда после успешного выполнения или перед ретуурном
 
             listOfDataForArray = lineStream.collect(Collectors.toList());
 
@@ -24,3 +25,6 @@ public class DataFileReader {
         return listOfDataForArray;
     }
 }
+
+//логи
+// проверка на налл в самом начале метода и свой эксепшн,

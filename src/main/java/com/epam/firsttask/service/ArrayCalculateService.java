@@ -1,21 +1,22 @@
 package com.epam.firsttask.service;
 
 import com.epam.firsttask.entity.DataArray;
+import com.epam.firsttask.exception.DataArrayException;
 
 public interface ArrayCalculateService {
 
-    public int findMinValue(DataArray dataArray);
+    int findMinValue(DataArray dataArray);
 
-    public int findMaxValue(DataArray dataArray);
+    int findMaxValue(DataArray dataArray) throws DataArrayException;
 
-    public int sumValues(DataArray dataArray);
+    int sumValues(DataArray dataArray);
 
-    public int findAverageValue(DataArray dataArray);
+    double findAverageValue(DataArray dataArray) throws DataArrayException;
 
-    public int findPositiveElementsNumber(DataArray dataArray);
+    int findPositiveElementsNumber(DataArray dataArray);
 
-    public int findNegativeElementsNumber(DataArray dataArray);
+    int findNegativeElementsNumber(DataArray dataArray);
 
-    public int[] replaceArrayElementsWithOppositeSigns(DataArray dataArray);
+    int[] replaceArrayElementsWithOppositeSigns(DataArray dataArray);
 
 }

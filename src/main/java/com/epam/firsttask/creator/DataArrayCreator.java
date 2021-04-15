@@ -12,3 +12,4 @@ public class DataArrayCreator {
 
     }
 }
+//проверка на пустой массив

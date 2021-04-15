@@ -3,18 +3,21 @@ package com.epam.firsttask.service.impl;
 import com.epam.firsttask.entity.DataArray;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.util.Arrays;
 
 public class ArraySortServiceImplTest {
     private final static int[] ARRAY_BEFORE_SORTING = {3, 5, 12, 44, 2, -35, 66, 1, 6, 87};
     private final static int[] EXPECTED_ARRAY_AFTER_SORTING = {-35, 1, 2, 3, 5, 6, 12, 44, 66, 87};
-    private static ArraySortServiceImpl arraySortService;
-    DataArray dataArray = new DataArray();
+    private final ArraySortServiceImpl arraySortService = new ArraySortServiceImpl();
+    private DataArray dataArray = new DataArray();
 
-    @BeforeClass
+    @BeforeMethod
     public void setUp() {
-        arraySortService = new ArraySortServiceImpl();
-        dataArray.setArray(ARRAY_BEFORE_SORTING);
+        dataArray = new DataArray();
+        dataArray.setArray(Arrays.copyOf(ARRAY_BEFORE_SORTING, ARRAY_BEFORE_SORTING.length));
     }
 
     @Test

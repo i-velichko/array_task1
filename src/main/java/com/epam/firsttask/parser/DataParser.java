@@ -14,3 +14,5 @@ public class DataParser {
     }
 
 }
+
+//проверка на налл

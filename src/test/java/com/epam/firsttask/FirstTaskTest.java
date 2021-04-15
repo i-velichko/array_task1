@@ -68,8 +68,8 @@ public class FirstTaskTest {
         int expectedSumValues = 261;
         Assert.assertEquals(expectedSumValues, actualSumValues);
 
-        int actualAverageValue = arrayCalculateServiceImpl.findAverageValue(dataArrayObject);
-        int expectedAverageValue = 26;
+        double actualAverageValue = arrayCalculateServiceImpl.findAverageValue(dataArrayObject);
+        double expectedAverageValue = 26;
         Assert.assertEquals(expectedAverageValue, actualAverageValue);
 
         int actualPositiveElementsNumber = arrayCalculateServiceImpl.findPositiveElementsNumber(dataArrayObject);

@@ -2,8 +2,24 @@ package com.epam.firsttask.service.impl;
 
 import com.epam.firsttask.entity.DataArray;
 import com.epam.firsttask.service.ArraySortService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.Arrays;
+import java.util.stream.IntStream;
 
 public class ArraySortServiceImpl implements ArraySortService {
+    private final static Logger LOGGER = LogManager.getLogger();
+
+    @Override
+    public int[] intStreamArraySort(DataArray dataArray) {
+        LOGGER.info("Array before sorting - " + Arrays.toString(dataArray.getArray()));
+        int[] ints = IntStream.of(dataArray.getArray())
+                .sorted().toArray();
+        LOGGER.info("Use intStream method. Array after sorting - " + Arrays.toString(ints));
+        return ints;
+    }
+
     @Override
     public int[] bubbleArraySort(DataArray dataArray) {
         int[] arrayForSort = dataArray.getArray();
