@@ -14,19 +14,6 @@ public class ArraySortServiceImpl implements ArraySortService {
     private final static Logger LOGGER = LogManager.getLogger();
 
     @Override
-    public int[] intStreamArraySort(DataArray dataArray) throws DataArrayException {
-        if (ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.info("Array before sorting - " + Arrays.toString(dataArray.getArray()));
-            int[] ints = IntStream.of(dataArray.getArray())
-                    .sorted().toArray();
-            LOGGER.info("Use intStream method. Array after sorting - " + Arrays.toString(ints));
-            return ints;
-        } else {
-            throw new DataArrayException("Array not valid for this operation.");
-        }
-    }
-
-    @Override
     public int[] bubbleArraySort(DataArray dataArray) throws DataArrayException {
         if (ArrayValidator.isCorrectArray(dataArray)) {
             int[] arrayForSort = Arrays.copyOf(dataArray.getArray(), dataArray.getArray().length);
@@ -90,6 +77,19 @@ public class ArraySortServiceImpl implements ArraySortService {
             }
             LOGGER.info("Selection array sort use. Array after sorting - " + Arrays.toString(arrayForSort));
             return arrayForSort;
+        } else {
+            throw new DataArrayException("Array not valid for this operation.");
+        }
+    }
+
+    @Override
+    public int[] intStreamArraySort(DataArray dataArray) throws DataArrayException {
+        if (ArrayValidator.isCorrectArray(dataArray)) {
+            LOGGER.info("Array before sorting - " + Arrays.toString(dataArray.getArray()));
+            int[] ints = IntStream.of(dataArray.getArray())
+                    .sorted().toArray();
+            LOGGER.info("Use intStream method. Array after sorting - " + Arrays.toString(ints));
+            return ints;
         } else {
             throw new DataArrayException("Array not valid for this operation.");
         }

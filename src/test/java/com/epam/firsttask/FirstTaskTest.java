@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FirstTaskTest {
-    private final static String DATA_FILE_PATH = "src/main/resources/data.txt";
+    private final static String DATA_FILE_PATH = "src/main/resources/data/data.txt";
     private static DataFileReader dataFileReader;
     private static DataValidator dataValidator;
     private static DataParser dataParser;
@@ -36,9 +36,6 @@ public class FirstTaskTest {
         List<String> actualLinesFromFile;
         List<String> actualValidLines = new ArrayList<>();
         List<DataArray> actualDataArrays = new ArrayList<>();
-
-        List<String> actualData = dataFileReader.readDataArray(DATA_FILE_PATH);
-
         actualLinesFromFile = dataFileReader.readDataArray(DATA_FILE_PATH);
 
         for (String s : actualLinesFromFile) {
@@ -46,8 +43,6 @@ public class FirstTaskTest {
                 actualValidLines.add(s);
             }
         }
-        int validLinesSize = actualValidLines.size();
-
         for (String validLine : actualValidLines) {
             int[] ints = dataParser.convertStringToNumbers(validLine);
             DataArray dataArrayInstance = dataArrayCreator.fillTheArrayWithData(ints);
@@ -64,7 +59,7 @@ public class FirstTaskTest {
         int expectedMinValue = 1;
         Assert.assertEquals(expectedMinValue, actualMinValue);
 
-        int actualSumValues = arrayCalculateServiceImpl.sumValues(dataArrayObject);
+        int actualSumValues = arrayCalculateServiceImpl.calculateSumValues(dataArrayObject);
         int expectedSumValues = 261;
         Assert.assertEquals(expectedSumValues, actualSumValues);
 

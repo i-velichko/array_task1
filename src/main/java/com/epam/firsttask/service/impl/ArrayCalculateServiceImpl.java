@@ -48,7 +48,7 @@ public class ArrayCalculateServiceImpl implements ArrayCalculateService {
     }
 
     @Override
-    public int sumValues(DataArray dataArray) throws DataArrayException {
+    public int calculateSumValues(DataArray dataArray) throws DataArrayException {
         if (ArrayValidator.isCorrectArray(dataArray)) {
             int[] array = dataArray.getArray();
             int elementsArraySum = 0;

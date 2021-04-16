@@ -9,7 +9,7 @@ public interface ArrayCalculateService {
 
     int findMaxValue(DataArray dataArray) throws DataArrayException;
 
-    int sumValues(DataArray dataArray) throws DataArrayException;
+    int calculateSumValues(DataArray dataArray) throws DataArrayException;
 
     double findAverageValue(DataArray dataArray) throws DataArrayException;
 

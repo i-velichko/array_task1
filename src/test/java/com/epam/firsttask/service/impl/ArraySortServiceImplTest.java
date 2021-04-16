@@ -26,10 +26,34 @@ public class ArraySortServiceImplTest {
         Assert.assertEquals(EXPECTED_ARRAY_AFTER_SORTING, actualArrayAfterSorting);
     }
 
+    @Test(expectedExceptions = NullPointerException.class)
+    public void testBubbleSortIsObjectNull() throws DataArrayException {
+        DataArray dataArray = new DataArray();
+        Assert.assertNull(arraySortService.bubbleArraySort(dataArray));
+    }
+
+    @Test(expectedExceptions = DataArrayException.class)
+    public void testBubbleSortIsArrayEmpty() throws DataArrayException {
+        dataArray.setArray(new int[0]);
+        Assert.assertNull(arraySortService.bubbleArraySort(dataArray));
+    }
+
     @Test
     public void testInsertionSortTrueResult() throws DataArrayException {
         int[] actualArrayAfterSorting = arraySortService.insertionArraySort(dataArray);
         Assert.assertEquals(EXPECTED_ARRAY_AFTER_SORTING, actualArrayAfterSorting);
+    }
+
+    @Test(expectedExceptions = NullPointerException.class)
+    public void testInsertionSortIsObjectNull() throws DataArrayException {
+        DataArray dataArray = new DataArray();
+        Assert.assertNull(arraySortService.insertionArraySort(dataArray));
+    }
+
+    @Test(expectedExceptions = DataArrayException.class)
+    public void testInsertionSortIsArrayEmpty() throws DataArrayException {
+        dataArray.setArray(new int[0]);
+        Assert.assertNull(arraySortService.insertionArraySort(dataArray));
     }
 
     @Test
@@ -37,4 +61,35 @@ public class ArraySortServiceImplTest {
         int[] actualArrayAfterSorting = arraySortService.selectionArraySort(dataArray);
         Assert.assertEquals(EXPECTED_ARRAY_AFTER_SORTING, actualArrayAfterSorting);
     }
+
+    @Test(expectedExceptions = NullPointerException.class)
+    public void testSelectionSortIsObjectNull() throws DataArrayException {
+        DataArray dataArray = new DataArray();
+        Assert.assertNull(arraySortService.selectionArraySort(dataArray));
+    }
+
+    @Test(expectedExceptions = DataArrayException.class)
+    public void testSelectionSortIsArrayEmpty() throws DataArrayException {
+        dataArray.setArray(new int[0]);
+        Assert.assertNull(arraySortService.selectionArraySort(dataArray));
+    }
+
+    @Test
+    public void intStreamArraySortTrueResult() throws DataArrayException {
+        int[] actualArrayAfterSorting = arraySortService.intStreamArraySort(dataArray);
+        Assert.assertEquals(EXPECTED_ARRAY_AFTER_SORTING, actualArrayAfterSorting);
+    }
+
+    @Test(expectedExceptions = NullPointerException.class)
+    public void testIntStreamSortIsObjectNull() throws DataArrayException {
+        DataArray dataArray = new DataArray();
+        Assert.assertNull(arraySortService.intStreamArraySort(dataArray));
+    }
+
+    @Test(expectedExceptions = DataArrayException.class)
+    public void testIntStreamSortIsArrayEmpty() throws DataArrayException {
+        dataArray.setArray(new int[0]);
+        Assert.assertNull(arraySortService.intStreamArraySort(dataArray));
+    }
+
 }

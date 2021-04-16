@@ -3,6 +3,7 @@ import com.epam.firsttask.exception.DataArrayException;
 import com.epam.firsttask.service.impl.ArrayCalculateServiceImpl;
 import com.epam.firsttask.service.impl.ArraySortServiceImpl;
 import com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl;
+import com.epam.firsttask.validator.ArrayValidator;
 
 public class Main {
     public static void main(String[] args) throws DataArrayException {
@@ -20,13 +21,14 @@ public class Main {
         intStreamArrayCalculateService.findNegativeElementsNumber(dataArray);
         intStreamArrayCalculateService.findPositiveElementsNumber(dataArray);
         intStreamArrayCalculateService.findAverageValue(dataArray);
-        intStreamArrayCalculateService.sumValues(dataArray);
+        intStreamArrayCalculateService.calculateSumValues(dataArray);
         intStreamArrayCalculateService.findMaxValue(dataArray);
         intStreamArrayCalculateService.findMinValue(dataArray);
 
         arraySortService.bubbleArraySort(dataArray);
         arraySortService.insertionArraySort(dataArray);
         arraySortService.selectionArraySort(dataArray);
+
 
     }
 }

@@ -40,7 +40,7 @@ public class IntStreamArrayCalculateServiceImpl implements ArrayCalculateService
     }
 
     @Override
-    public int sumValues(DataArray dataArray) throws DataArrayException {
+    public int calculateSumValues(DataArray dataArray) throws DataArrayException {
         if (ArrayValidator.isCorrectArray(dataArray)) {
             int sum = IntStream.of(dataArray.getArray())
                     .sum();
