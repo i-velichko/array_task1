@@ -1,5 +1,6 @@
 package com.epam.firsttask.parser;
 
+import com.epam.firsttask.exception.DataArrayException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -15,7 +16,7 @@ public class DataParserTest {
     }
 
     @Test
-    public void testConvertStringToNumbers() {
+    public void testConvertStringToNumbers() throws DataArrayException {
         int[] actualArray = dataParser.convertStringToNumbers(LINE_BEFORE_PARSING);
         Assert.assertEquals(EXPECTED_ARRAY, actualArray);
     }

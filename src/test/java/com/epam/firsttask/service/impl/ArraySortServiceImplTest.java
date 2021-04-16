@@ -1,6 +1,7 @@
 package com.epam.firsttask.service.impl;
 
 import com.epam.firsttask.entity.DataArray;
+import com.epam.firsttask.exception.DataArrayException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -20,19 +21,19 @@ public class ArraySortServiceImplTest {
     }
 
     @Test
-    public void testBubbleSortTrueResult() {
+    public void testBubbleSortTrueResult() throws DataArrayException {
         int[] actualArrayAfterSorting = arraySortService.bubbleArraySort(dataArray);
         Assert.assertEquals(EXPECTED_ARRAY_AFTER_SORTING, actualArrayAfterSorting);
     }
 
     @Test
-    public void testInsertionSortTrueResult() {
+    public void testInsertionSortTrueResult() throws DataArrayException {
         int[] actualArrayAfterSorting = arraySortService.insertionArraySort(dataArray);
         Assert.assertEquals(EXPECTED_ARRAY_AFTER_SORTING, actualArrayAfterSorting);
     }
 
     @Test
-    public void testSelectionSortTrueResult() {
+    public void testSelectionSortTrueResult() throws DataArrayException {
         int[] actualArrayAfterSorting = arraySortService.selectionArraySort(dataArray);
         Assert.assertEquals(EXPECTED_ARRAY_AFTER_SORTING, actualArrayAfterSorting);
     }
