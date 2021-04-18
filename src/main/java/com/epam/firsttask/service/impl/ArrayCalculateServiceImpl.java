@@ -14,29 +14,28 @@ public class ArrayCalculateServiceImpl implements ArrayCalculateService {
 
     @Override
     public int findMinValue(DataArray dataArray) throws DataArrayException {
-        if (ArrayValidator.isCorrectArray(dataArray)) {
-            int[] array = dataArray.getArray();
-            int minValue = array[0];
-
-            for (int j : array) {
-                if (j < minValue) {
-                    minValue = j;
-                }
-            }
-            LOGGER.info("Min element value in this array = " + minValue);
-            return minValue;
-        } else {
-            throw new DataArrayException("Array not valid for this operation.");
+        if (!ArrayValidator.isCorrectArray(dataArray)) {
+            LOGGER.error("Array not valid for this operation");
+            throw new DataArrayException();
         }
-    }
+                int[] array = dataArray.getArray();
+                int minValue = array[0];
+                for (int j : array) {
+                    if (j < minValue) {
+                        minValue = j;
+                    }
+                }
+                LOGGER.info("Min element value in this array = " + minValue);
+                return minValue;
+            }
 
-    @Override
-    public int findMaxValue(DataArray dataArray) throws DataArrayException {
-        if (ArrayValidator.isCorrectArray(dataArray)) {
-            int[] array = dataArray.getArray();
-            int maxValue = array[0];
-            for (int j : array) {
-                if (j > maxValue) {
+        @Override
+        public int findMaxValue (DataArray dataArray) throws DataArrayException {
+            if (ArrayValidator.isCorrectArray(dataArray)) {
+                int[] array = dataArray.getArray();
+                int maxValue = array[0];
+                for (int j : array) {
+                    if (j > maxValue) {
                     maxValue = j;
                 }
             }

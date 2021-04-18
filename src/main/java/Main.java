@@ -4,6 +4,9 @@ import com.epam.firsttask.service.impl.ArrayCalculateServiceImpl;
 import com.epam.firsttask.service.impl.ArraySortServiceImpl;
 import com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl;
 
+import java.util.OptionalInt;
+import java.util.stream.IntStream;
+
 
 public class Main {
     public static void main(String[] args) throws DataArrayException {
@@ -29,6 +32,13 @@ public class Main {
         arraySortService.insertionArraySort(dataArray);
         arraySortService.selectionArraySort(dataArray);
 
+        int[] ints = new int[0];
+        int sum = 0;
+        System.out.println(sum);
+        DataArray dataArray1 = new DataArray();
+        dataArray1.setArray(ints);
+
+        System.out.println(arrayCalculateService.findMinValue(dataArray1));
 
 
 
