@@ -3,7 +3,7 @@ import com.epam.firsttask.exception.DataArrayException;
 import com.epam.firsttask.service.impl.ArrayCalculateServiceImpl;
 import com.epam.firsttask.service.impl.ArraySortServiceImpl;
 import com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl;
-import com.epam.firsttask.validator.ArrayValidator;
+
 
 public class Main {
     public static void main(String[] args) throws DataArrayException {
@@ -28,6 +28,8 @@ public class Main {
         arraySortService.bubbleArraySort(dataArray);
         arraySortService.insertionArraySort(dataArray);
         arraySortService.selectionArraySort(dataArray);
+
+
 
 
     }

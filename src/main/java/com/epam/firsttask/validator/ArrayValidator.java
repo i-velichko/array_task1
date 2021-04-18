@@ -5,6 +5,11 @@ import com.epam.firsttask.entity.DataArray;
 public class ArrayValidator {
 
     public static boolean isCorrectArray(DataArray dataArray) {
-        return dataArray != null && dataArray.getArray().length != 0;
+        if (dataArray == null) {
+            return false;
+        } else if (dataArray.getArray() == null) {
+            return false;
+        } else return dataArray.getArray().length != 0;
     }
+
 }

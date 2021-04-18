@@ -20,4 +20,10 @@ public class DataParserTest {
         int[] actualArray = dataParser.convertStringToNumbers(LINE_BEFORE_PARSING);
         Assert.assertEquals(EXPECTED_ARRAY, actualArray);
     }
+
+    @Test(expectedExceptions = DataArrayException.class)
+    public void falseWait() throws DataArrayException {
+        int [] actualArray = dataParser.convertStringToNumbers(null);
+        Assert.assertNull(actualArray);
+    }
 }

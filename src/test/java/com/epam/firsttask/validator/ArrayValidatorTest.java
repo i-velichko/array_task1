@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 public class ArrayValidatorTest {
     private final static int[] CORRECT_ARRAY = {1, 2, 3, 4, 5};
-    private final static int[] EMPTY_ARRAY = new int[0];
     private DataArray dataArray;
 
     @BeforeMethod
@@ -22,16 +21,23 @@ public class ArrayValidatorTest {
         Assert.assertTrue(actualResult);
     }
 
-    @Test (expectedExceptions = NullPointerException.class)
-    public void testIsObjectNull(){
+    @Test
+    public void testIsCorrectArrayWhenObjectNull() {
+        Assert.assertFalse(ArrayValidator.isCorrectArray(null));
+    }
+
+    @Test
+    public void testIsCorrectArrayWhenArrayNull() {
+        dataArray.setArray(null);
         boolean actualResult = ArrayValidator.isCorrectArray(dataArray);
         Assert.assertFalse(actualResult);
     }
 
     @Test
-    public void testIsArrayEmpty(){
-        dataArray.setArray(EMPTY_ARRAY);
+    public void testIsCorrectArrayWhenArrayEmpty() {
+        dataArray.setArray(new int[0]);
         boolean actualResult = ArrayValidator.isCorrectArray(dataArray);
         Assert.assertFalse(actualResult);
     }
+
 }

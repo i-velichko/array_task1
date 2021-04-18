@@ -13,7 +13,8 @@ public class DataArray {
     }
 
     public int[] getArray() {
-        return Arrays.copyOf(array, array.length);
+        return array;
+
     }
 
     public void setArray(int[] array) {
