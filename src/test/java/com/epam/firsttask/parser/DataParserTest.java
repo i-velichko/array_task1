@@ -23,7 +23,7 @@ public class DataParserTest {
 
     @Test(expectedExceptions = DataArrayException.class)
     public void falseWait() throws DataArrayException {
-        int [] actualArray = dataParser.convertStringToNumbers(null);
+        int[] actualArray = dataParser.convertStringToNumbers(null);
         Assert.assertNull(actualArray);
     }
 }

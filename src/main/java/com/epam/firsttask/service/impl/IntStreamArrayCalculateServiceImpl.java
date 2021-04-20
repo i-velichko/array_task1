@@ -15,91 +15,91 @@ public class IntStreamArrayCalculateServiceImpl implements ArrayCalculateService
 
     @Override
     public int findMinValue(DataArray dataArray) throws DataArrayException {
-        if (ArrayValidator.isCorrectArray(dataArray)) {
-            int minValue = IntStream.of(dataArray.getArray())
-                    .min()
-                    .orElseThrow();
-            LOGGER.info("Use IntStream method. Min element value in this array = " + minValue);
-            return minValue;
-        } else {
-            throw new DataArrayException("Array not valid for this operation.");
+        if (!ArrayValidator.isCorrectArray(dataArray)) {
+            LOGGER.error("Array not valid for this operation");
+            throw new DataArrayException();
         }
+        int minValue = IntStream.of(dataArray.getArray())
+                .min()
+                .orElseThrow();
+        LOGGER.info("Use IntStream method. Min element value in this array = " + minValue);
+        return minValue;
     }
 
     @Override
     public int findMaxValue(DataArray dataArray) throws DataArrayException {
-        if (ArrayValidator.isCorrectArray(dataArray)) {
-            int maxValue = IntStream.of(dataArray.getArray())
-                    .max()
-                    .orElseThrow();
-            LOGGER.info("Use IntStream method. Max element value in this array = " + maxValue);
-            return maxValue;
-        } else {
-            throw new DataArrayException("Array not valid for this operation.");
+        if (!ArrayValidator.isCorrectArray(dataArray)) {
+            LOGGER.error("Array not valid for this operation");
+            throw new DataArrayException();
         }
+        int maxValue = IntStream.of(dataArray.getArray())
+                .max()
+                .orElseThrow();
+        LOGGER.info("Use IntStream method. Max element value in this array = " + maxValue);
+        return maxValue;
     }
 
     @Override
     public int calculateSumValues(DataArray dataArray) throws DataArrayException {
-        if (ArrayValidator.isCorrectArray(dataArray)) {
-            int sum = IntStream.of(dataArray.getArray())
-                    .sum();
-            LOGGER.info("Use IntStream method. Sum  array elements = " + sum);
-            return sum;
-        } else {
-            throw new DataArrayException("Array not valid for this operation.");
+        if (!ArrayValidator.isCorrectArray(dataArray)) {
+            LOGGER.error("Array not valid for this operation");
+            throw new DataArrayException();
         }
+        int sum = IntStream.of(dataArray.getArray())
+                .sum();
+        LOGGER.info("Use IntStream method. Sum  array elements = " + sum);
+        return sum;
     }
 
     @Override
     public double findAverageValue(DataArray dataArray) throws DataArrayException {
-        if (ArrayValidator.isCorrectArray(dataArray)) {
-            double averageValue = IntStream.of(dataArray.getArray())
-                    .average()
-                    .orElseThrow();
-            LOGGER.info("Use IntStream method. Average  array elements value  = " + averageValue);
-            return averageValue;
-        } else {
-            throw new DataArrayException("Array not valid for this operation.");
+        if (!ArrayValidator.isCorrectArray(dataArray)) {
+            LOGGER.error("Array not valid for this operation");
+            throw new DataArrayException();
         }
+        double averageValue = IntStream.of(dataArray.getArray())
+                .average()
+                .orElseThrow();
+        LOGGER.info("Use IntStream method. Average  array elements value  = " + averageValue);
+        return averageValue;
     }
 
     @Override
     public int findPositiveElementsNumber(DataArray dataArray) throws DataArrayException {
-        if (ArrayValidator.isCorrectArray(dataArray)) {
-            int[] ints = IntStream.of(dataArray.getArray())
-                    .filter(value -> value > 0)
-                    .toArray();
-            LOGGER.info("Use IntStream method. Number of positive array elements = " + ints.length);
-            return ints.length;
-        } else {
-            throw new DataArrayException("Array not valid for this operation.");
+        if (!ArrayValidator.isCorrectArray(dataArray)) {
+            LOGGER.error("Array not valid for this operation");
+            throw new DataArrayException();
         }
+        int[] ints = IntStream.of(dataArray.getArray())
+                .filter(value -> value > 0)
+                .toArray();
+        LOGGER.info("Use IntStream method. Number of positive array elements = " + ints.length);
+        return ints.length;
     }
 
     @Override
     public int findNegativeElementsNumber(DataArray dataArray) throws DataArrayException {
-        if (ArrayValidator.isCorrectArray(dataArray)) {
-            int[] ints = IntStream.of(dataArray.getArray())
-                    .filter(value -> value < 0)
-                    .toArray();
-            LOGGER.info("Use IntStream method. Number of negative array elements = " + ints.length);
-            return ints.length;
-        } else {
-            throw new DataArrayException("Array not valid for this operation.");
+        if (!ArrayValidator.isCorrectArray(dataArray)) {
+            LOGGER.error("Array not valid for this operation");
+            throw new DataArrayException();
         }
+        int[] ints = IntStream.of(dataArray.getArray())
+                .filter(value -> value < 0)
+                .toArray();
+        LOGGER.info("Use IntStream method. Number of negative array elements = " + ints.length);
+        return ints.length;
     }
 
     @Override
     public int[] replaceArrayElementsWithOppositeSigns(DataArray dataArray) throws DataArrayException {
-        if (ArrayValidator.isCorrectArray(dataArray)) {
-            int[] ints = IntStream.of(Arrays.copyOf(dataArray.getArray(), dataArray.getArray().length))
-                    .map(value -> value * -1)
-                    .toArray();
-            LOGGER.info("Use IntStream method. Replaced with opposite signs array elements is - " + Arrays.toString(ints));
-            return ints;
-        } else {
-            throw new DataArrayException("Array not valid for this operation.");
+        if (!ArrayValidator.isCorrectArray(dataArray)) {
+            LOGGER.error("Array not valid for this operation");
+            throw new DataArrayException();
         }
+        int[] ints = IntStream.of(Arrays.copyOf(dataArray.getArray(), dataArray.getArray().length))
+                .map(value -> value * -1)
+                .toArray();
+        LOGGER.info("Use IntStream method. Replaced with opposite signs array elements is - " + Arrays.toString(ints));
+        return ints;
     }
 }

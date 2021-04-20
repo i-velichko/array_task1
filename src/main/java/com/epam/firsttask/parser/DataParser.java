@@ -10,10 +10,9 @@ public class DataParser {
 
     public int[] convertStringToNumbers(String dataLine) throws DataArrayException {
 
-        if (dataLine == null){
+        if (dataLine == null) {
             throw new DataArrayException("Line for convert is null");
         }
-
         String[] charactersArray = dataLine.split(" ");
         int[] numbers = new int[charactersArray.length];
         for (int i = 0; i < charactersArray.length; i++) {
@@ -22,6 +21,5 @@ public class DataParser {
         LOGGER.info("Parsing the string was successful");
         return numbers;
     }
-
 }
 

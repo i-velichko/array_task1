@@ -9,14 +9,11 @@ public class DataArrayCreator {
 
     public DataArray fillTheArrayWithData(int[] numbers) throws DataArrayException {
 
-        if (Arrays.equals(numbers, new int[0])){
+        if (Arrays.equals(numbers, new int[0])) {
             throw new DataArrayException("Array is empty");
         }
-
         DataArray dataArray = new DataArray(numbers);
-
         return dataArray;
-
     }
 }
 

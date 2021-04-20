@@ -14,7 +14,6 @@ public class DataArray {
 
     public int[] getArray() {
         return array;
-
     }
 
     public void setArray(int[] array) {

@@ -11,5 +11,4 @@ public class ArrayValidator {
             return false;
         } else return dataArray.getArray().length != 0;
     }
-
 }

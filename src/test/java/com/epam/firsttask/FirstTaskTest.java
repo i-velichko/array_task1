@@ -78,7 +78,6 @@ public class FirstTaskTest {
         int[] actualArrayBeforeReplacement = arrayCalculateServiceImpl.replaceArrayElementsWithOppositeSigns(dataArrayObject);
         int[] expectedArrayAfterReplacement = {-3, -5, -12, -44, -2, -35, -66, -1, -6, -87};
         Assert.assertEquals(expectedArrayAfterReplacement, actualArrayBeforeReplacement);
-
     }
 }
 
