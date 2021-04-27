@@ -12,8 +12,8 @@ public class DataArrayCreator {
         if (Arrays.equals(numbers, new int[0])) {
             throw new DataArrayException("Array is empty");
         }
-        DataArray dataArray = new DataArray(numbers);
-        return dataArray;
+
+        return new DataArray(numbers);
     }
 }
 

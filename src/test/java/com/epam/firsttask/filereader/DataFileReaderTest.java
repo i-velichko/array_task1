@@ -27,7 +27,7 @@ public class DataFileReaderTest {
 
     @Test(expectedExceptions = DataArrayException.class)
     public void testReadDataFileNotFound() throws DataArrayException {
-        List<String> actualData = dataFileReader.readDataArray(WRONG_FILE_PATH);
+        dataFileReader.readDataArray(WRONG_FILE_PATH);
     }
 
     @Test(expectedExceptions = DataArrayException.class)

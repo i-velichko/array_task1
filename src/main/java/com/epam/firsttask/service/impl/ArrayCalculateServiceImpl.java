@@ -14,10 +14,7 @@ public class ArrayCalculateServiceImpl implements ArrayCalculateService {
 
     @Override
     public int findMinValue(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         int[] array = dataArray.getArray();
         int minValue = array[0];
         for (int j : array) {
@@ -31,10 +28,7 @@ public class ArrayCalculateServiceImpl implements ArrayCalculateService {
 
     @Override
     public int findMaxValue(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         int[] array = dataArray.getArray();
         int maxValue = array[0];
         for (int j : array) {
@@ -48,10 +42,7 @@ public class ArrayCalculateServiceImpl implements ArrayCalculateService {
 
     @Override
     public int calculateSumValues(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         int[] array = dataArray.getArray();
         int elementsArraySum = 0;
         for (int j : array) {
@@ -63,10 +54,7 @@ public class ArrayCalculateServiceImpl implements ArrayCalculateService {
 
     @Override
     public double findAverageValue(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         int[] array = dataArray.getArray();
         double elementsArraySum = 0;
         for (double j : array) {
@@ -79,10 +67,7 @@ public class ArrayCalculateServiceImpl implements ArrayCalculateService {
 
     @Override
     public int findPositiveElementsNumber(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         int[] array = dataArray.getArray();
         int positiveElementsNumber = 0;
         for (int j : array) {
@@ -96,10 +81,7 @@ public class ArrayCalculateServiceImpl implements ArrayCalculateService {
 
     @Override
     public int findNegativeElementsNumber(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         int[] array = dataArray.getArray();
         int negativeElementsNumber = 0;
         for (int j : array) {
@@ -112,10 +94,7 @@ public class ArrayCalculateServiceImpl implements ArrayCalculateService {
 
     @Override
     public int[] replaceArrayElementsWithOppositeSigns(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         int[] arrayForSort = Arrays.copyOf(dataArray.getArray(), dataArray.getArray().length);
         int arraySize = arrayForSort.length;
         for (int i = 0; i < arraySize; i++) {
@@ -123,5 +102,12 @@ public class ArrayCalculateServiceImpl implements ArrayCalculateService {
         }
         LOGGER.info("Replaced with opposite signs array elements is - " + Arrays.toString(arrayForSort));
         return arrayForSort;
+    }
+
+    private void arrayCheck(DataArray dataArray) throws DataArrayException {
+        if (!ArrayValidator.isCorrectArray(dataArray)) {
+            LOGGER.error("Array not valid for this operation");
+            throw new DataArrayException();
+        }
     }
 }

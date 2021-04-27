@@ -1,122 +1,118 @@
-2021-04-20 12:17:20,339 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array before sorting - [3, 5, 12, 44, 2, -35, 66, 1, 6, 87]
-2021-04-20 12:17:20,356 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Use intStream method. Array after sorting - [-35, 1, 2, 3, 5, 6, 12, 44, 66, 87]
-2021-04-20 12:17:20,361 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Bubble array sort use. Array after sorting - [-35, 1, 2, 3, 5, 6, 12, 44, 66, 87]
-2021-04-20 12:17:20,365 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Insertion array sort use. Array after sorting - [-35, 1, 2, 3, 5, 6, 12, 44, 66, 87]
-2021-04-20 12:17:20,369 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Selection array sort use. Array after sorting - [-35, 1, 2, 3, 5, 6, 12, 44, 66, 87]
-2021-04-20 12:17:46,952 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 12:18:03,323 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 12:26:28,056 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Sum  array elements = 261
-2021-04-20 12:26:28,073 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Average  array elements value  = 26.1
-2021-04-20 12:26:28,077 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Max element value in this array = 87
-2021-04-20 12:26:28,083 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Min element value in this array = 1
-2021-04-20 12:26:28,084 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 12:26:28,086 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 12:26:28,088 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Number of negative array elements =0
-2021-04-20 12:26:28,092 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Number of positive array elements = 10
-2021-04-20 12:26:28,096 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Replaced with opposite signs array elements is - [-3, -5, -12, -44, -2, -35, -66, -1, -6, -87]
-2021-04-20 12:28:04,764 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 12:32:53,799 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Sum  array elements = 261
-2021-04-20 12:32:53,815 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Average  array elements value  = 26.1
-2021-04-20 12:32:53,820 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Max element value in this array = 87
-2021-04-20 12:32:53,825 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Min element value in this array = 1
-2021-04-20 12:32:53,827 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 12:32:53,828 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 12:32:53,830 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 12:32:53,832 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Number of negative array elements =0
-2021-04-20 12:32:53,836 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Number of positive array elements = 10
-2021-04-20 12:32:53,841 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Replaced with opposite signs array elements is - [-3, -5, -12, -44, -2, -35, -66, -1, -6, -87]
-2021-04-20 12:56:44,931 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Sum  array elements = 261
-2021-04-20 12:56:44,948 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Average  array elements value  = 26.1
-2021-04-20 12:56:44,954 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Max element value in this array = 87
-2021-04-20 12:56:44,962 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Min element value in this array = 1
-2021-04-20 12:56:44,971 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Number of negative array elements = 0
-2021-04-20 12:56:44,977 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Number of positive array elements = 10
-2021-04-20 12:56:44,984 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Replaced with opposite signs array elements is - [-3, -5, -12, -44, -2, -35, -66, -1, -6, -87]
-2021-04-20 12:57:46,159 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Sum  array elements = 261
-2021-04-20 12:57:46,178 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Average  array elements value  = 26.1
-2021-04-20 12:57:46,184 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Max element value in this array = 87
-2021-04-20 12:57:46,190 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Min element value in this array = 1
-2021-04-20 12:57:46,198 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Number of negative array elements = 0
-2021-04-20 12:57:46,204 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Number of positive array elements = 10
-2021-04-20 12:57:46,210 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Replaced with opposite signs array elements is - [-3, -5, -12, -44, -2, -35, -66, -1, -6, -87]
-2021-04-20 12:58:09,616 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array before sorting - [3, 5, 12, 44, 2, -35, 66, 1, 6, 87]
-2021-04-20 12:58:09,621 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Use intStream method. Array after sorting - [-35, 1, 2, 3, 5, 6, 12, 44, 66, 87]
-2021-04-20 12:58:09,626 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Bubble array sort use. Array after sorting - [-35, 1, 2, 3, 5, 6, 12, 44, 66, 87]
-2021-04-20 12:58:09,630 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Insertion array sort use. Array after sorting - [-35, 1, 2, 3, 5, 6, 12, 44, 66, 87]
-2021-04-20 12:58:09,636 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Selection array sort use. Array after sorting - [-35, 1, 2, 3, 5, 6, 12, 44, 66, 87]
-2021-04-20 12:59:25,726 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:00:35,307 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:03:47,879 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:40,668 INFO com.epam.firsttask.filereader.DataFileReader [main] File read successfully.
-2021-04-20 13:17:47,106 INFO com.epam.firsttask.parser.DataParser [main] Parsing the string was successful
-2021-04-20 13:17:52,105 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Sum  array elements = 261
-2021-04-20 13:17:52,113 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,115 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,117 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,125 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Average  array elements value  = 26.1
-2021-04-20 13:17:52,129 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,131 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,132 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,134 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Max element value in this array = 87
-2021-04-20 13:17:52,135 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,136 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,137 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,138 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Min element value in this array = 1
-2021-04-20 13:17:52,140 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,141 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,143 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,144 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Number of negative array elements =0
-2021-04-20 13:17:52,146 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,147 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,148 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,149 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Number of positive array elements = 10
-2021-04-20 13:17:52,151 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,152 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,153 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,154 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Replaced with opposite signs array elements is - [-3, -5, -12, -44, -2, -35, -66, -1, -6, -87]
-2021-04-20 13:17:52,155 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,157 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:52,158 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:57,432 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array before sorting - [3, 5, 12, 44, 2, -35, 66, 1, 6, 87]
-2021-04-20 13:17:57,437 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Use intStream method. Array after sorting - [-35, 1, 2, 3, 5, 6, 12, 44, 66, 87]
-2021-04-20 13:17:57,442 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Bubble array sort use. Array after sorting - [-35, 1, 2, 3, 5, 6, 12, 44, 66, 87]
-2021-04-20 13:17:57,444 ERROR com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:57,445 ERROR com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:57,447 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Insertion array sort use. Array after sorting - [-35, 1, 2, 3, 5, 6, 12, 44, 66, 87]
-2021-04-20 13:17:57,449 ERROR com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:57,451 ERROR com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:57,452 ERROR com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:57,454 ERROR com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:57,456 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Selection array sort use. Array after sorting - [-35, 1, 2, 3, 5, 6, 12, 44, 66, 87]
-2021-04-20 13:17:57,457 ERROR com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array not valid for this operation
-2021-04-20 13:17:57,459 ERROR com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,610 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Sum  array elements = 261
-2021-04-20 13:18:03,618 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,619 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,621 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,626 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Average  array elements value  = 26.1
-2021-04-20 13:18:03,627 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,628 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,629 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,631 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Max element value in this array = 87
-2021-04-20 13:18:03,632 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,633 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,634 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,636 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Min element value in this array = 1
-2021-04-20 13:18:03,637 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,638 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,640 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,643 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Number of negative array elements = 0
-2021-04-20 13:18:03,644 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,645 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,647 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,648 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Number of positive array elements = 10
-2021-04-20 13:18:03,650 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,651 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,653 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,655 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Replaced with opposite signs array elements is - [-3, -5, -12, -44, -2, -35, -66, -1, -6, -87]
-2021-04-20 13:18:03,657 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,660 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:03,661 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
-2021-04-20 13:18:14,879 INFO com.epam.firsttask.validator.DataValidator [main] Data string is not valid.
-2021-04-20 13:18:14,887 INFO com.epam.firsttask.validator.DataValidator [main] Data string is valid.
+2021-04-27 09:33:36,024 INFO com.epam.firsttask.filereader.DataFileReader [main] File read successfully.
+2021-04-27 09:33:43,253 INFO com.epam.firsttask.filereader.DataFileReader [main] File read successfully.
+2021-04-27 09:33:51,983 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Sum  array elements = 261
+2021-04-27 09:33:51,990 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:51,992 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:51,993 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:51,998 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Average  array elements value  = 26.1
+2021-04-27 09:33:52,000 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,001 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,003 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,004 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Max element value in this array = 87
+2021-04-27 09:33:52,006 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,007 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,008 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,010 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Min element value in this array = 1
+2021-04-27 09:33:52,011 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,013 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,015 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,017 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Number of negative array elements =0
+2021-04-27 09:33:52,018 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,019 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,021 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,022 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Number of positive array elements = 10
+2021-04-27 09:33:52,023 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,024 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,026 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,027 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Replaced with opposite signs array elements is - [-3, -5, -12, -44, -2, -35, -66, -1, -6, -87]
+2021-04-27 09:33:52,028 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,031 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:52,032 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:33:59,994 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array before sorting - [3, 5, 12, 44, 2, -35, 66, 1, 6, 87]
+2021-04-27 09:34:00,001 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Use intStream method. Array after sorting - [-35, 1, 2, 3, 5, 6, 12, 44, 66, 87]
+2021-04-27 09:34:00,009 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Bubble array sort use. Array after sorting - [-35, 1, 2, 3, 5, 6, 12, 44, 66, 87]
+2021-04-27 09:34:00,010 ERROR com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:00,012 ERROR com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:00,015 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Insertion array sort use. Array after sorting - [-35, 1, 2, 3, 5, 6, 12, 44, 66, 87]
+2021-04-27 09:34:00,016 ERROR com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:00,017 ERROR com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:00,018 ERROR com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:00,020 ERROR com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:00,021 INFO com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Selection array sort use. Array after sorting - [-35, 1, 2, 3, 5, 6, 12, 44, 66, 87]
+2021-04-27 09:34:00,022 ERROR com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:00,024 ERROR com.epam.firsttask.service.impl.ArraySortServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,552 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Sum  array elements = 261
+2021-04-27 09:34:05,559 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,561 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,562 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,569 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Average  array elements value  = 26.1
+2021-04-27 09:34:05,571 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,573 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,574 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,577 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Max element value in this array = 87
+2021-04-27 09:34:05,578 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,580 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,582 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,584 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Min element value in this array = 1
+2021-04-27 09:34:05,586 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,587 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,589 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,594 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Number of negative array elements = 0
+2021-04-27 09:34:05,596 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,598 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,599 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,601 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Number of positive array elements = 10
+2021-04-27 09:34:05,602 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,604 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,606 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,608 INFO com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Use IntStream method. Replaced with opposite signs array elements is - [-3, -5, -12, -44, -2, -35, -66, -1, -6, -87]
+2021-04-27 09:34:05,609 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,611 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:05,612 ERROR com.epam.firsttask.service.impl.IntStreamArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:34:18,347 INFO com.epam.firsttask.validator.DataValidator [main] Data string is not valid.
+2021-04-27 09:34:18,355 INFO com.epam.firsttask.validator.DataValidator [main] Data string is valid.
+2021-04-27 09:34:25,733 INFO com.epam.firsttask.filereader.DataFileReader [main] File read successfully.
+2021-04-27 09:34:25,737 INFO com.epam.firsttask.validator.DataValidator [main] Data string is valid.
+2021-04-27 09:34:25,737 INFO com.epam.firsttask.validator.DataValidator [main] Data string is valid.
+2021-04-27 09:34:25,737 INFO com.epam.firsttask.validator.DataValidator [main] Data string is not valid.
+2021-04-27 09:34:25,737 INFO com.epam.firsttask.validator.DataValidator [main] Data string is valid.
+2021-04-27 09:34:25,737 INFO com.epam.firsttask.validator.DataValidator [main] Data string is valid.
+2021-04-27 09:34:25,737 INFO com.epam.firsttask.parser.DataParser [main] Parsing the string was successful
+2021-04-27 09:34:25,738 INFO com.epam.firsttask.parser.DataParser [main] Parsing the string was successful
+2021-04-27 09:34:25,738 INFO com.epam.firsttask.parser.DataParser [main] Parsing the string was successful
+2021-04-27 09:34:25,739 INFO com.epam.firsttask.parser.DataParser [main] Parsing the string was successful
+2021-04-27 09:34:25,740 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Max element value in this array = 87
+2021-04-27 09:34:25,742 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Min element value in this array = 1
+2021-04-27 09:34:25,743 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Sum  array elements = 261
+2021-04-27 09:34:25,745 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Average  array elements value  = 26.1
+2021-04-27 09:34:25,746 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Number of positive array elements = 10
+2021-04-27 09:34:25,746 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Number of negative array elements =0
+2021-04-27 09:34:25,746 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Replaced with opposite signs array elements is - [-3, -5, -12, -44, -2, -35, -66, -1, -6, -87]
+2021-04-27 09:37:16,280 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Sum  array elements = 261
+2021-04-27 09:37:16,290 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,291 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,292 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,296 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Average  array elements value  = 26.1
+2021-04-27 09:37:16,298 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,300 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,301 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,303 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Max element value in this array = 87
+2021-04-27 09:37:16,304 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,306 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,307 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,308 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Min element value in this array = 1
+2021-04-27 09:37:16,310 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,311 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,312 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,314 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Number of negative array elements =0
+2021-04-27 09:37:16,315 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,316 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,318 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,319 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Number of positive array elements = 10
+2021-04-27 09:37:16,321 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,322 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,323 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,325 INFO com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Replaced with opposite signs array elements is - [-3, -5, -12, -44, -2, -35, -66, -1, -6, -87]
+2021-04-27 09:37:16,326 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,329 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation
+2021-04-27 09:37:16,330 ERROR com.epam.firsttask.service.impl.ArrayCalculateServiceImpl [main] Array not valid for this operation

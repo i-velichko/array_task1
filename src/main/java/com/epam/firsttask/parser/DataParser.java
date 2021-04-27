@@ -16,7 +16,7 @@ public class DataParser {
         String[] charactersArray = dataLine.split(" ");
         int[] numbers = new int[charactersArray.length];
         for (int i = 0; i < charactersArray.length; i++) {
-            numbers[i] = Integer.parseInt(charactersArray[i]);
+            numbers[i] = Integer.parseInt(charactersArray[i].trim());
         }
         LOGGER.info("Parsing the string was successful");
         return numbers;

@@ -9,6 +9,8 @@ public class ArrayValidator {
             return false;
         } else if (dataArray.getArray() == null) {
             return false;
-        } else return dataArray.getArray().length != 0;
+        } else {
+            return dataArray.getArray().length != 0;
+        }
     }
 }

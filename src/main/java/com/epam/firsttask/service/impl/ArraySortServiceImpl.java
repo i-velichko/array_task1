@@ -15,10 +15,7 @@ public class ArraySortServiceImpl implements ArraySortService {
 
     @Override
     public int[] bubbleArraySort(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         int[] arrayForSort = Arrays.copyOf(dataArray.getArray(), dataArray.getArray().length);
         int n = arrayForSort.length;
         int temp = 0;
@@ -37,10 +34,7 @@ public class ArraySortServiceImpl implements ArraySortService {
 
     @Override
     public int[] insertionArraySort(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         int[] arrayForSort = Arrays.copyOf(dataArray.getArray(), dataArray.getArray().length);
         for (int left = 0; left < arrayForSort.length; left++) {
             int value = arrayForSort[left];
@@ -60,10 +54,7 @@ public class ArraySortServiceImpl implements ArraySortService {
 
     @Override
     public int[] selectionArraySort(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         int[] arrayForSort = Arrays.copyOf(dataArray.getArray(), dataArray.getArray().length);
         for (int i = 0; i < arrayForSort.length; i++) {
             int min = arrayForSort[i];
@@ -84,14 +75,18 @@ public class ArraySortServiceImpl implements ArraySortService {
 
     @Override
     public int[] intStreamArraySort(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         LOGGER.info("Array before sorting - " + Arrays.toString(dataArray.getArray()));
         int[] ints = IntStream.of(dataArray.getArray())
                 .sorted().toArray();
         LOGGER.info("Use intStream method. Array after sorting - " + Arrays.toString(ints));
         return ints;
+    }
+
+    private void arrayCheck(DataArray dataArray) throws DataArrayException {
+        if (!ArrayValidator.isCorrectArray(dataArray)) {
+            LOGGER.error("Array not valid for this operation");
+            throw new DataArrayException();
+        }
     }
 }

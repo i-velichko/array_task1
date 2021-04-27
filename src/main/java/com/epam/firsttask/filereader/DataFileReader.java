@@ -21,7 +21,8 @@ public class DataFileReader {
             throw new DataArrayException("File path does not exist");
         }
 
-        try (Stream<String> lineStream = Files.lines(Paths.get(pathToFile))) {
+        try {
+            Stream<String> lineStream = Files.lines(Paths.get(pathToFile));
             LOGGER.info("File read successfully.");
 
             listOfDataForArray = lineStream.collect(Collectors.toList());

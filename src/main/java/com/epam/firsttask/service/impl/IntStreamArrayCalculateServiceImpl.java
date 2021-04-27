@@ -15,10 +15,7 @@ public class IntStreamArrayCalculateServiceImpl implements ArrayCalculateService
 
     @Override
     public int findMinValue(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         int minValue = IntStream.of(dataArray.getArray())
                 .min()
                 .orElseThrow();
@@ -28,10 +25,7 @@ public class IntStreamArrayCalculateServiceImpl implements ArrayCalculateService
 
     @Override
     public int findMaxValue(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         int maxValue = IntStream.of(dataArray.getArray())
                 .max()
                 .orElseThrow();
@@ -41,10 +35,7 @@ public class IntStreamArrayCalculateServiceImpl implements ArrayCalculateService
 
     @Override
     public int calculateSumValues(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         int sum = IntStream.of(dataArray.getArray())
                 .sum();
         LOGGER.info("Use IntStream method. Sum  array elements = " + sum);
@@ -53,10 +44,7 @@ public class IntStreamArrayCalculateServiceImpl implements ArrayCalculateService
 
     @Override
     public double findAverageValue(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         double averageValue = IntStream.of(dataArray.getArray())
                 .average()
                 .orElseThrow();
@@ -66,10 +54,7 @@ public class IntStreamArrayCalculateServiceImpl implements ArrayCalculateService
 
     @Override
     public int findPositiveElementsNumber(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         int[] ints = IntStream.of(dataArray.getArray())
                 .filter(value -> value > 0)
                 .toArray();
@@ -79,10 +64,7 @@ public class IntStreamArrayCalculateServiceImpl implements ArrayCalculateService
 
     @Override
     public int findNegativeElementsNumber(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         int[] ints = IntStream.of(dataArray.getArray())
                 .filter(value -> value < 0)
                 .toArray();
@@ -92,14 +74,18 @@ public class IntStreamArrayCalculateServiceImpl implements ArrayCalculateService
 
     @Override
     public int[] replaceArrayElementsWithOppositeSigns(DataArray dataArray) throws DataArrayException {
-        if (!ArrayValidator.isCorrectArray(dataArray)) {
-            LOGGER.error("Array not valid for this operation");
-            throw new DataArrayException();
-        }
+        arrayCheck(dataArray);
         int[] ints = IntStream.of(Arrays.copyOf(dataArray.getArray(), dataArray.getArray().length))
                 .map(value -> value * -1)
                 .toArray();
         LOGGER.info("Use IntStream method. Replaced with opposite signs array elements is - " + Arrays.toString(ints));
         return ints;
+    }
+
+    private void arrayCheck(DataArray dataArray) throws DataArrayException {
+        if (!ArrayValidator.isCorrectArray(dataArray)) {
+            LOGGER.error("Array not valid for this operation");
+            throw new DataArrayException();
+        }
     }
 }
