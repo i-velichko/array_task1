@@ -35,9 +35,10 @@ public class DataArray {
 
     @Override
     public String toString() {
-        return "DataArray{" +
-                "array=" + Arrays.toString(array) +
-                '}';
+        final StringBuilder sb = new StringBuilder("DataArray{");
+        sb.append("array=").append(Arrays.toString(array));
+        sb.append('}');
+        return sb.toString();
     }
 }
 
