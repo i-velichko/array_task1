@@ -22,7 +22,7 @@ public class DataFileReaderTest {
         List<String> actualData = dataFileReader.readDataArray(DATA_FILE_PATH);
         int actualCountLines = actualData.size();
         int expectedCountLines = 5;
-        Assert.assertEquals(expectedCountLines, actualCountLines);
+        Assert.assertEquals(actualCountLines, expectedCountLines);
     }
 
     @Test(expectedExceptions = DataArrayException.class)
@@ -32,7 +32,7 @@ public class DataFileReaderTest {
 
     @Test(expectedExceptions = DataArrayException.class)
     public void testReadDataNullExp() throws DataArrayException {
-        List<String> actualData = dataFileReader.readDataArray(null);
+        dataFileReader.readDataArray(null);
     }
 
 }

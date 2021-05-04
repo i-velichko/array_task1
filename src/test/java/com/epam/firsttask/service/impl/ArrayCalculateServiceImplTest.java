@@ -21,7 +21,7 @@ public class ArrayCalculateServiceImplTest {
     public void testFindMinValuePositiveScenario() throws DataArrayException {
         int actualMaxValue = arrayCalculateService.findMinValue(dataArray);
         int expectedMinValue = 1;
-        Assert.assertEquals(expectedMinValue, actualMaxValue);
+        Assert.assertEquals(actualMaxValue, expectedMinValue);
     }
 
     @Test(expectedExceptions = DataArrayException.class)
@@ -46,7 +46,7 @@ public class ArrayCalculateServiceImplTest {
     public void testFindMaxValuePositiveScenario() throws DataArrayException {
         int actualMaxValue = arrayCalculateService.findMaxValue(dataArray);
         int expectedMaxValue = 87;
-        Assert.assertEquals(expectedMaxValue, actualMaxValue);
+        Assert.assertEquals(actualMaxValue, expectedMaxValue);
     }
 
     @Test(expectedExceptions = DataArrayException.class)
@@ -71,7 +71,7 @@ public class ArrayCalculateServiceImplTest {
     public void testCalculateSumValuesPositiveScenario() throws DataArrayException {
         int actualSumValues = arrayCalculateService.calculateSumValues(dataArray);
         int expectedSumValues = 261;
-        Assert.assertEquals(expectedSumValues, actualSumValues);
+        Assert.assertEquals(actualSumValues, expectedSumValues);
     }
 
     @Test(expectedExceptions = DataArrayException.class)
@@ -96,7 +96,7 @@ public class ArrayCalculateServiceImplTest {
     public void testFindAverageValuePositiveScenario() throws DataArrayException {
         double actualAverageValue = arrayCalculateService.findAverageValue(dataArray);
         double expectedAverageValue = 26.1;
-        Assert.assertEquals(expectedAverageValue, actualAverageValue);
+        Assert.assertEquals(actualAverageValue, expectedAverageValue);
     }
 
     @Test(expectedExceptions = DataArrayException.class)
@@ -121,7 +121,7 @@ public class ArrayCalculateServiceImplTest {
     public void testFindPositiveElementsNumberPositiveScenario() throws DataArrayException {
         int actualPositiveElementsNumber = arrayCalculateService.findPositiveElementsNumber(dataArray);
         int expectedPositiveElementsNumber = 10;
-        Assert.assertEquals(expectedPositiveElementsNumber, actualPositiveElementsNumber);
+        Assert.assertEquals(actualPositiveElementsNumber, expectedPositiveElementsNumber);
     }
 
     @Test(expectedExceptions = DataArrayException.class)
@@ -146,7 +146,7 @@ public class ArrayCalculateServiceImplTest {
     public void testFindNegativeElementsNumberPositiveScenario() throws DataArrayException {
         int actualNegativeElementsNumber = arrayCalculateService.findNegativeElementsNumber(dataArray);
         int expectedNegativeElementsNumber = 0;
-        Assert.assertEquals(expectedNegativeElementsNumber, actualNegativeElementsNumber);
+        Assert.assertEquals(actualNegativeElementsNumber, expectedNegativeElementsNumber);
     }
 
     @Test(expectedExceptions = DataArrayException.class)
@@ -171,7 +171,7 @@ public class ArrayCalculateServiceImplTest {
     public void testReplaceArrayElementsWithOppositeSignsPositiveScenario() throws DataArrayException {
         int[] actualArrayBeforeReplacement = arrayCalculateService.replaceArrayElementsWithOppositeSigns(dataArray);
         int[] expectedArrayAfterReplacement = {-3, -5, -12, -44, -2, -35, -66, -1, -6, -87};
-        Assert.assertEquals(expectedArrayAfterReplacement, actualArrayBeforeReplacement);
+        Assert.assertEquals(actualArrayBeforeReplacement, expectedArrayAfterReplacement);
     }
 
     @Test(expectedExceptions = DataArrayException.class)

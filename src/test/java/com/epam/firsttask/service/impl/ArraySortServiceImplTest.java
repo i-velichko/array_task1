@@ -4,6 +4,7 @@ import com.epam.firsttask.entity.DataArray;
 import com.epam.firsttask.exception.DataArrayException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -20,10 +21,24 @@ public class ArraySortServiceImplTest {
         dataArray.setArray(Arrays.copyOf(ARRAY_BEFORE_SORTING, ARRAY_BEFORE_SORTING.length));
     }
 
-    @Test
-    public void testBubbleSortTrueResult() throws DataArrayException {
+    @DataProvider(name = "myData")
+    public Object[][] getDataFromDataProvider() {
+        return new DataArray[][]
+                {
+                        {new DataArray(new int[]{3, 9, 11, 54, 2, -35, 66, 1, -6, 87})},
+                        {new DataArray(new int[]{2, 8, 14, 44, -2, -35, -66, 1, 6, 87})},
+                        {new DataArray(new int[]{3, 7, 15, -14, 2, -35, 66, 1, 6, -87})},
+                        {new DataArray(new int[]{4, 6, -17, 43, 2, -35, 66, 1, 6, 87})},
+                        {new DataArray(new int[]{5, 5, 19, 41, 2, -35, -66, 1, -6, 87})}
+                };
+    }
+
+    @Test(dataProvider = "myData")
+    public void testBubbleSortTrueResult(DataArray dataArray) throws DataArrayException {
         int[] actualArrayAfterSorting = arraySortService.bubbleArraySort(dataArray);
-        Assert.assertEquals(EXPECTED_ARRAY_AFTER_SORTING, actualArrayAfterSorting);
+        int[] expected = Arrays.copyOf(dataArray.getArray(), dataArray.getArray().length);
+        Arrays.sort(expected);
+        Assert.assertEquals(actualArrayAfterSorting, expected);
     }
 
     @Test(expectedExceptions = DataArrayException.class)
@@ -37,10 +52,12 @@ public class ArraySortServiceImplTest {
         arraySortService.bubbleArraySort(dataArray);
     }
 
-    @Test
-    public void testInsertionSortTrueResult() throws DataArrayException {
+    @Test(dataProvider = "myData")
+    public void testInsertionSortTrueResult(DataArray dataArray) throws DataArrayException {
         int[] actualArrayAfterSorting = arraySortService.insertionArraySort(dataArray);
-        Assert.assertEquals(EXPECTED_ARRAY_AFTER_SORTING, actualArrayAfterSorting);
+        int[] expected = Arrays.copyOf(dataArray.getArray(), dataArray.getArray().length);
+        Arrays.sort(expected);
+        Assert.assertEquals(actualArrayAfterSorting, expected);
     }
 
     @Test(expectedExceptions = DataArrayException.class)
@@ -54,10 +71,12 @@ public class ArraySortServiceImplTest {
         arraySortService.insertionArraySort(dataArray);
     }
 
-    @Test
-    public void testSelectionSortTrueResult() throws DataArrayException {
+    @Test(dataProvider = "myData")
+    public void testSelectionSortTrueResult(DataArray dataArray) throws DataArrayException {
         int[] actualArrayAfterSorting = arraySortService.selectionArraySort(dataArray);
-        Assert.assertEquals(EXPECTED_ARRAY_AFTER_SORTING, actualArrayAfterSorting);
+        int[] expected = Arrays.copyOf(dataArray.getArray(), dataArray.getArray().length);
+        Arrays.sort(expected);
+        Assert.assertEquals(actualArrayAfterSorting, expected);
     }
 
     @Test(expectedExceptions = DataArrayException.class)
@@ -71,10 +90,12 @@ public class ArraySortServiceImplTest {
         arraySortService.selectionArraySort(dataArray);
     }
 
-    @Test
-    public void intStreamArraySortTrueResult() throws DataArrayException {
+    @Test(dataProvider = "myData")
+    public void intStreamArraySortTrueResult(DataArray dataArray) throws DataArrayException {
         int[] actualArrayAfterSorting = arraySortService.intStreamArraySort(dataArray);
-        Assert.assertEquals(EXPECTED_ARRAY_AFTER_SORTING, actualArrayAfterSorting);
+        int[] expected = Arrays.copyOf(dataArray.getArray(), dataArray.getArray().length);
+        Arrays.sort(expected);
+        Assert.assertEquals(actualArrayAfterSorting, expected);
     }
 
     @Test(expectedExceptions = DataArrayException.class)

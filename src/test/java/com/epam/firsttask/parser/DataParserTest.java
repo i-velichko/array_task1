@@ -18,7 +18,7 @@ public class DataParserTest {
     @Test
     public void testConvertStringToNumbers() throws DataArrayException {
         int[] actualArray = dataParser.convertStringToNumbers(LINE_BEFORE_PARSING);
-        Assert.assertEquals(EXPECTED_ARRAY, actualArray);
+        Assert.assertEquals(actualArray, EXPECTED_ARRAY);
     }
 
     @Test(expectedExceptions = DataArrayException.class)

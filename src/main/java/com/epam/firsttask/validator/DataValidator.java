@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 public class DataValidator {
     private final static Logger LOGGER = LogManager.getLogger();
-    private static final String DATA_REGEX = "[0-9 ,-]+";
+    private static final String DATA_REGEX = "[\\d ,-]+";
 
     public boolean validateDataString(String dataLine) {
 
